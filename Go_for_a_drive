@@ -1,0 +1,43 @@
+var rectA = 100;
+
+var X = 150;//position of the car
+
+draw = function() {
+    background(150, 240, 240);
+    fill(12, 12, 255);
+    textSize(25);
+    text("Go for A Drive", 105, 30);
+
+    fill(55, 55, 255);//the building
+    strokeWeight(0);
+    rect(rectA-rectA/20, rectA*2, rectA/2, rectA);
+    
+    fill(12, 120, 150);// the windows
+    rect(rectA-rectA/90, rectA*2.2, rectA/6, rectA/5);
+    rect(rectA-rectA/90, rectA*2.6, rectA/6, rectA/5);
+    rect(rectA+rectA/4.4, rectA*2.6, rectA/6, rectA/5);
+    rect(rectA+rectA/4.4, rectA*2.2, rectA/6, rectA/5);
+
+    textSize(rectA/5);
+    fill(0, 0, 0);
+    text("Best EV Rental", rectA*1.1, rectA);
+    text("Save and Lease", rectA*1.1, rectA*1.5);
+
+    fill(5, 255, 0);//the grass
+    rect(0,300,400,300);
+
+    fill (25, 50, 115);// body of the car
+    rect(X, 280, 50, 10);
+    rect(X+10, 270, 30, 10);
+    
+    fill(70, 60, 60);//Wheels
+    ellipse(X + 10, 295, 10, 10);
+    ellipse(X + 40, 295, 10, 10);
+    
+    fill(255, 255, 0);//the sun
+    noStroke();
+    ellipse(300, 60, 40, 40);
+    
+    X++;
+
+};
